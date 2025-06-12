@@ -1,0 +1,61 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "svg"
+version = "1.0"
+description = "Synthetic Visual Genome."
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: Apache Software License",
+]
+dependencies = [
+    "torch==2.5.1",         # use appropriate cuda version
+    "torchvision==0.20.1",  # use appropriate cuda version
+    # "flash-attn==2.6.3",
+    "einops", "fastapi", "markdown2[all]", "numpy",
+    "requests", "sentencepiece", "tokenizers>=0.12.1",
+    "uvicorn", "tensorboard", "open_clip_torch",
+    "pandas",
+    "h5py",
+    "braceexpand",
+    "shortuuid", 
+    "httpx",
+    "deepspeed==0.13.0",
+    "peft==0.4.0",
+    "transformers==4.43.3",
+    "wandb",
+    "accelerate==0.33.0",
+    "scikit-learn==1.2.2",
+    "sentence-transformers==2.3.1",
+    "sentencepiece==0.1.99",
+    "supervision==0.22.0",
+    "einops==0.6.1", "einops-exts==0.0.4", "timm==0.6.13",
+    "pycocotools", "terminaltables", "lvis",
+    "panopticapi@git+https://github.com/cocodataset/panopticapi",
+    "cached-path",
+    "aiohttp",
+    "openai",
+    "backoff",
+    "gradio_client==1.5.2",
+    "gradio==5.9.1",
+    "streamlit==1.41.1",
+    "gcsfs",
+    "datasets==3.2.0",
+]
+
+[project.optional-dependencies]
+demo = [
+    "gradio_client==1.5.2",
+    "gradio==5.9.1",
+    "streamlit==1.41.1",
+]
+
+[tool.setuptools.packages.find]
+exclude = ["assets*", "benchmark*", "docs", "dist*", "playground*", "scripts*", "tests*"]
+
+[tool.wheel]
+exclude = ["assets*", "benchmark*", "docs", "dist*", "playground*", "scripts*", "tests*"]

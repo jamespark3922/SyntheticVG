@@ -1,0 +1,72 @@
+# Python
+__pycache__
+*.pyc
+*.egg-info
+dist
+
+# Log
+*.log
+*.log.*
+# *.json
+# *.jsonl
+
+# Data
+!**/alpaca-data-conversation.json
+
+# Editor
+.idea
+*.swp
+
+# Vis
+*.html
+.gradio
+
+# Other
+.DS_Store
+wandb
+output
+.vscode
+
+data
+exp
+som_sam_detections
+checkpoints
+ckpts*
+
+# batch
+debug
+models
+results
+*_results
+temp
+test
+
+.ipynb_checkpoints
+# *.ipynb
+
+# DevContainer
+!.devcontainer/*
+
+/*.sh
+/*.jsonl
+/*.json
+/*.jpg
+
+# Demo
+serve_images/
+.vscode/launch.json
+*.code-workspace
+
+# scripts
+scripts/v1_6
+scripts/v1_5
+# scripts/eval
+scripts/beaker
+
+# eval
+svg/eval/*.json
+svg/eval/*/*.json*
+
+# slurm
+*.err
+*.out
